@@ -1,0 +1,113 @@
+Calculadora simples
+
+package calc;
+import javax.swing.*;
+
+public class Calc {
+
+   
+    public static void main(String[] args) {
+	double v1, v2;
+        String op;
+        
+        op=JOptionPane.showInputDialog("Informe a operação: ");
+        v1=Double.parseDouble(JOptionPane.showInputDialog("Informe o primeiro valor: "));
+        v2=Double.parseDouble(JOptionPane.showInputDialog("Informe o segundo valor: "));
+        
+        
+        if ("+".equals(op)){
+             JOptionPane.showMessageDialog(null, "Resultado: " + (v1+v2));
+        }
+        else if ("-".equals(op)) {
+            JOptionPane.showMessageDialog(null, "Resultado: " + (v1-v2));
+        }
+        else if ("*".equals(op)) {
+            JOptionPane.showMessageDialog(null, "Resultado: " + (v1*v2));
+        }
+        else if ("/".equals(op)) {
+            JOptionPane.showMessageDialog(null, "Resultado: " + (v1/v2));   
+        }
+    }
+    
+}
+____________________________________________________________________________________________________________
+
+Calculadora com Scanner e JOptionPane
+
+package calc;
+import javax.swing.*;
+import java.util.Scanner;
+
+public class Calc {
+
+   
+    public static void main(String[] args) 
+        Scanner calc = new Scanner (System.in);
+        String op;
+        
+        op=JOptionPane.showInputDialog("Informe a operação: ");
+             
+        if ("+".equals(op)){
+            double A = calc.nextDouble();
+            double B = calc.nextDouble();
+            JOptionPane.showMessageDialog(null, "Resultado: " + (A+B));
+        }
+        else if ("-".equals(op)) {
+            double A = calc.nextDouble();
+            double B = calc.nextDouble();
+            JOptionPane.showMessageDialog(null, "Resultado: " + (A-B));
+        }
+        else if ("*".equals(op)) {
+            double A = calc.nextDouble();
+            double B = calc.nextDouble();
+            JOptionPane.showMessageDialog(null, "Resultado: " + (A*B));
+        }
+        else if ("/".equals(op)) {
+            double A = calc.nextDouble();
+            double B = calc.nextDouble();
+            JOptionPane.showMessageDialog(null, "Resultado: " + (A/B));   
+        }
+    }
+    
+}
+
+___________________________________________________________________________________________________________
+
+Calculadora com Scanner usando System.out.println
+
+package calc;
+import javax.swing.*;
+import java.util.Scanner;
+
+public class Calc {
+
+   
+    public static void main(String[] args) {
+        Scanner calc = new Scanner (System.in);
+        String op;
+        
+        op=JOptionPane.showInputDialog("Informe a operação: ");
+             
+        if ("+".equals(op)){
+            double A = calc.nextDouble();
+            double B = calc.nextDouble();
+            System.out.println("Resultado: " + (A+B)); 
+        }
+        else if ("-".equals(op)) {
+            double A = calc.nextDouble();
+            double B = calc.nextDouble();
+            System.out.println("Resultado: " + (A-B)); 
+        }
+        else if ("*".equals(op)) {
+            double A = calc.nextDouble();
+            double B = calc.nextDouble();
+            System.out.println("Resultado: " + (A*B)); 
+        }
+        else if ("/".equals(op)) {
+            double A = calc.nextDouble();
+            double B = calc.nextDouble();
+            System.out.println("Resultado: " + (A/B));   
+        }
+    }
+    
+}
